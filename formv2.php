@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //set alle post variables
         $username = $mysqli->real_escape_string($_POST['username']);
         $email = $mysqli->real_escape_string($_POST['email']);
-        $password = md5($_POST['password']); //md5 has password for security
+        $password = md5($_POST['password']); //md5 hash
         $avatar_path = $mysqli->real_escape_string('images/'.$_FILES['avatar']['name']);
         
         //File type kan kun være billede formater.
